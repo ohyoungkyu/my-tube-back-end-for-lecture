@@ -17,6 +17,8 @@ public class UserController {
 
         System.out.println("email: " + user.getEmail());
 
+        userService.join(user);
+
         return "user";
     }
 
