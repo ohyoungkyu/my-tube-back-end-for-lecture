@@ -1,5 +1,6 @@
 package com.example.mytube.User.Controller;
 
+import com.example.mytube.User.DTO.Userdto;
 import com.example.mytube.User.Entity.User;
 import com.example.mytube.User.Service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -23,8 +24,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public User login(@RequestBody User user) {
-        User loginedUser = userService.login(user);
+    public Userdto login(@RequestBody User user) throws Exception {
+        Userdto loginedUser = userService.login(user);
         return loginedUser;
     }
 
